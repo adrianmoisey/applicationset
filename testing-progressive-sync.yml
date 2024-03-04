@@ -56,21 +56,21 @@ spec:
       sources:
     {{- if eq .values.type "app" }}
         - repoURL: https://github.com/adrianmoisey/argocd-example-apps
-          targetRevision: HEAD
+          targetRevision: b18adb39bf2fccdaf13991a3323cf217d62f895b
           path: guestbook/
 
         - repoURL: https://github.com/adrianmoisey/argocd-example-apps
-          targetRevision: HEAD
+          targetRevision: b18adb39bf2fccdaf13991a3323cf217d62f895b
           path: guestbook/{{ .metadata.labels.cell }}
 
     {{- if index .metadata.labels "singleton" }}
         - repoURL: https://github.com/adrianmoisey/argocd-example-apps
-          targetRevision: HEAD
+          targetRevision: b18adb39bf2fccdaf13991a3323cf217d62f895b
           path: guestbook/singleton
     {{- end }}
     {{- end }}
     {{- if eq .values.type "migrate" }}
         - repoURL: https://github.com/adrianmoisey/argocd-example-apps
-          targetRevision: HEAD
+          targetRevision: b18adb39bf2fccdaf13991a3323cf217d62f895b
           path: guestbook/migrations/
     {{- end }}
